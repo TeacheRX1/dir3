@@ -1,0 +1,436 @@
+/* SahraCity Rules Page CSS */
+:root {
+  --golden: #d4af37;
+  --golden-light: #f8e9a1;
+  --golden-dark: #b8860b;
+  --black: #121212;
+  --dark-gray: #1a1a1a;
+  --medium-gray: #242424;
+  --light-gray: #333333;
+}
+
+/* Main Rules Section Background */
+.rules-section {
+  padding: 120px 0 80px;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #121212, #1a1a1a, #222222, #151515);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.rules-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMjIyIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=');
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* Page Title */
+.fancy-separator {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, transparent, var(--golden), transparent);
+  margin: 0 auto 30px;
+}
+
+.htb-content {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.htb-item-subtitle {
+  color: var(--golden);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  max-width: 800px;
+  margin: 20px auto 40px;
+  color: #d0d0d0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Rules Navigation */
+.rules-nav {
+  position: sticky;
+  top: 100px;
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.rules-nav:hover {
+  border-color: rgba(212, 175, 55, 0.2);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.rules-nav h3 {
+  color: var(--golden);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.rules-nav h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: var(--golden);
+  border-radius: 3px;
+}
+
+.rules-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rules-nav ul li {
+  margin-bottom: 10px;
+}
+
+.rules-nav ul li a {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: #e0e0e0;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.rules-nav ul li a i {
+  margin-right: 10px;
+  color: var(--golden);
+  width: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.rules-nav ul li a:hover,
+.rules-nav ul li a.active {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--golden);
+  transform: translateX(5px);
+}
+
+.rules-nav ul li a:hover i,
+.rules-nav ul li a.active i {
+  transform: scale(1.2);
+}
+
+.rules-nav ul li a.hover-effect {
+  background: rgba(212, 175, 55, 0.05);
+}
+
+/* Rules Content Area */
+.rules-section-content {
+  background: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.rules-content {
+  padding: 30px;
+}
+
+.rules-header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.rules-date {
+  display: inline-block;
+  padding: 5px 15px;
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--golden);
+  font-size: 0.85rem;
+  border-radius: 50px;
+  margin-bottom: 15px;
+}
+
+.rules-title {
+  font-size: 2.2rem;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+  background: linear-gradient(to right, #ffffff, var(--golden), #ffffff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShine 3s ease-in-out infinite alternate;
+}
+
+/* Individual Rules Items */
+.rules-item {
+  margin-bottom: 60px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.rules-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* Category Title Styling */
+.category-title {
+  position: relative;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--golden);
+  text-align: center;
+  padding: 0 0 15px 0;
+}
+
+/* Support for both RTL and LTR category titles */
+.category-title {
+  direction: rtl;
+}
+
+.category-title.english {
+  direction: ltr;
+}
+
+.category-title::before,
+.category-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  width: 80px;
+  background: var(--golden);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.category-title::before {
+  right: calc(50% + 10px);
+  transform: translateX(50%);
+}
+
+.category-title::after {
+  left: calc(50% + 10px);
+  transform: translateX(-50%);
+}
+
+.category-title span {
+  position: relative;
+  padding: 0 15px;
+  background-color: var(--black);
+  z-index: 1;
+}
+
+/* Rules Content Styling */
+.rules-item h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 25px 0 15px;
+  text-align: center;
+}
+
+.rules-item h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin: 20px 0 15px;
+  text-align: center;
+}
+
+.rules-item h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #d0d0d0;
+  margin: 15px 0 10px;
+  text-align: center;
+}
+
+/* Support for both RTL and LTR text */
+.rules-item p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #d0d0d0;
+  transition: all 0.3s ease;
+  text-align: center;
+  direction: rtl;
+  padding: 0 15px;
+}
+
+.rules-item p.english {
+  direction: ltr;
+  text-align: left;
+}
+
+.rules-item h3, 
+.rules-item h4, 
+.rules-item h5 {
+  direction: rtl;
+}
+
+.rules-item h3.english, 
+.rules-item h4.english, 
+.rules-item h5.english {
+  direction: ltr;
+}
+
+/* Hover effect for paragraphs */
+.rules-item p:hover {
+  transform: scale(1.02);
+  background-color: rgba(212, 175, 55, 0.05);
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+/* Horizontal rule styling */
+.rules-item hr {
+  border-color: rgba(212, 175, 55, 0.2);
+  margin: 20px 0;
+  opacity: 0.3;
+}
+
+/* Floating particles effect */
+.floating-particle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: rgba(212, 175, 55, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(0) translateX(20px);
+  }
+  75% {
+    transform: translateY(20px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+/* Glow effect for headers */
+.rules-item h2.glow-effect,
+.rules-item h3.glow-effect {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* Enhanced background animation */
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Text shine animation */
+@keyframes textShine {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .rules-nav {
+    position: relative;
+    top: 0;
+    margin-bottom: 30px;
+  }
+  
+  .rules-section {
+    padding: 100px 0 60px;
+  }
+  
+  .rules-title {
+    font-size: 1.8rem;
+  }
+  
+  .category-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .rules-content {
+    padding: 20px 15px;
+  }
+  
+  .rules-nav ul li a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .rules-item h3 {
+    font-size: 1.3rem;
+  }
+  
+  .rules-item h4 {
+    font-size: 1.1rem;
+  }
+  
+  .rules-item h5 {
+    font-size: 1rem;
+  }
+  
+  .rules-item p {
+    font-size: 0.95rem;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+  }
+}
